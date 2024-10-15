@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <title>Home Page</title>
-</head>
-<body>
+{% extends 'layout.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
     <h1>Home</h1>
-    <p>checkout my <a href="/about">about</a> page</p>
-</body>
-</html>
+    <p>checkout the <a href="/about">about</a> page</p>
+{% endblock %}

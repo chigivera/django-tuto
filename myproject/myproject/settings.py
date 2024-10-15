@@ -20,13 +20,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-l80i4h@lcwp&g4x3bx8*^coxv1l7bh+=1=&qs2!ck_aif+h)2b'
+SECRET_KEY = 'django-insecure-qx4_7clr_zivmrm(j60%5=+ekg(7!+imteaeh!47)rk&q!dk&9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','8000-idx-django-tuto-1728904620914.cluster-23wp6v3w4jhzmwncf7crloq3kw.cloudworkstations.dev']
 
+CSRF_TRUSTED_ORIGINS = ['https://8000-idx-django-tuto-1728904620914.cluster-23wp6v3w4jhzmwncf7crloq3kw.cloudworkstations.dev']
 
 # Application definition
 
@@ -37,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'posts',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -116,10 +119,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = 'media/'
+STATIC_ROOT = BASE_DIR / 'assets'
+MEDIA_ROOT = BASE_DIR / 'media'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'static')
+STATICFILES_DIRS= [
+    BASE_DIR / 'static'
 ]
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

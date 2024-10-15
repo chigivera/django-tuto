@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-{% load static %}
-
-
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <title>About Page</title>
-    <script defer src="{% static 'js/main.js' %}"></script>
-</head>
-<body>
+{% extends 'layout.html' %}
+{% block title %}About{% endblock %}
+{% block content %}
     <h1>About</h1>
-    <p>go back to <a href="/">home</a> page</p>
-</body>
-</html>
+    <p>checkout the <a href="/">home</a> page</p>
+    {% endblock %}
